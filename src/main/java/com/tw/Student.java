@@ -9,6 +9,7 @@ class Student {
     private double average;
     private double programming;
     private int id;
+
     String getName() {
         return name;
     }

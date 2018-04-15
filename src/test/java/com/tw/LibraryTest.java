@@ -61,7 +61,6 @@ public class LibraryTest {
     }
 
 
-
     private String systemOut() {
         return outContent.toString();
     }
@@ -79,16 +78,19 @@ public class LibraryTest {
                 "全班总分平均数：330.0\n" +
                 "全班总分中位数：330.0\n");
     }
+
     @Test
     public void testGenerateScore_should_return_error_info() {
         library.generateScore("test");
         assertThat(systemOut()).isEqualTo("请按正确的格式输入要打印的学生的学号（格式： 学号, 学号,...），按回车提交：\n");
     }
+
     @Test
     public void testAddStudent() {
         library.addStudent("张三,1,数学:75,语文:95,英语:80,编程:80");
         assertThat(systemOut()).isEqualTo("学生张三的成绩被添加\n");
     }
+
     @Test
     public void testAddStudent_should_return_error_info() {
         library.addStudent("test");

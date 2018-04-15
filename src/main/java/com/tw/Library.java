@@ -137,7 +137,6 @@ public class Library {
         sumList.add(student.getSum());
         System.out.println("学生" + student.getName() + "的成绩被添加");
 
-
     }
 
     private boolean checkIdsFormat(String studentIds) {
